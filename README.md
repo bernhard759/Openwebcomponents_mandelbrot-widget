@@ -1,7 +1,12 @@
 # \<mandelbrot-widget>
 
+
+This is a webcomponent that displays an interactive widget of the mandelbrot set. The set can be zoomed and one can pan the canvas. You can also switch to the julia set at a given point on the canvas. This webcomponent can be customized using some attributes like the width, the color palette and the number of iterations for the mandelbrot plotting algorithm. The calculation is done using webworkers.
+
+![image](./assets/mandelbrot1.png)
+
 This webcomponent follows the [open-wc](https://github.com/open-wc/open-wc) recommendation.
-This is a webcomponent that display an interactive widget of the mandelbrot set. The set can be zoomed and one can pan the canvas. You can also switch to the julia set at a given point on the canvas. This webcomponent can be customized using some attributes like the width, the color palette and the number of iterations for the mandelbrot plotting algorithm. The calculation is done using webworkers.
+
 
 ## Installation
 
