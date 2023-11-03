@@ -3,7 +3,7 @@
   "description": "Webcomponent mandelbrot-widget following open-wc recommendations",
   "license": "MIT",
   "author": "mandelbrot-widget",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "type": "module",
   "main": "index.js",
   "module": "index.js",
