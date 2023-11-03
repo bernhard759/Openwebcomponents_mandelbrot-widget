@@ -4,6 +4,10 @@
   "license": "MIT",
   "author": "mandelbrot-widget",
   "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bernhard759/Openwebcomponents_mandelbrot-widget.git"
+  },
   "type": "module",
   "main": "index.js",
   "module": "index.js",
