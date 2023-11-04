@@ -14,7 +14,7 @@ export class MandelbrotWidget extends LitElement {
       align-items: center;
       overflow: hidden;
       min-width: 250px;
-      max-width: var(--canvas-width, 800px);
+      max-width: var(--canvas-width, 1000px);
       margin: 0 auto;
       width: 100%;
       border-radius: 1em;
@@ -142,8 +142,6 @@ export class MandelbrotWidget extends LitElement {
   /** Connected to the page  */
   connectedCallback() {
     super.connectedCallback();
-
-    this.shadowRoot.host.style.setProperty("--canvas-width", `${this.width}px`)
 
     /* Generate a random color array */
     this.colors = this.colorPalette();
@@ -710,23 +708,28 @@ export class MandelbrotWidget extends LitElement {
   /** Render our component */
   render() {
     return html`
-      <div class="canvas-container">
-        <canvas id="mandelbrot-canvas"></canvas>
-        <div class="canvas-controls">
-          <span class="plus" title="Zoom in">+</span>
-          <span class="center" title="Center">&#9678;</span>
-          <span class="minus" title="Zoom out">&minus;</span>
-          <span class="larr" title="Move left">&larr;</span>
-          <span class="uarr" title="Move up">&uarr;</span>
-          <span class="darr" title="Move down">&darr;</span>
-          <span class="rarr" title="Move right">&rarr;</span>
-          <span class="download" title="Download image">&#10515;</span>
-          <span class="fullscreen" title="Fullscreen">&#9974;</span>
-        </div>
-        <div class="contextmenu">
-          <button>Switch z</button>
-        </div>
+    <style>
+    :host {
+      --canvas-width: ${this.width}px;
+    }
+    </style>
+    <div class="canvas-container">
+      <canvas id="mandelbrot-canvas"></canvas>
+      <div class="canvas-controls">
+        <span class="plus" title="Zoom in">+</span>
+        <span class="center" title="Center">&#9678;</span>
+        <span class="minus" title="Zoom out">&minus;</span>
+        <span class="larr" title="Move left">&larr;</span>
+        <span class="uarr" title="Move up">&uarr;</span>
+        <span class="darr" title="Move down">&darr;</span>
+        <span class="rarr" title="Move right">&rarr;</span>
+        <span class="download" title="Download image">&#10515;</span>
+        <span class="fullscreen" title="Fullscreen">&#9974;</span>
       </div>
+      <div class="contextmenu">
+        <button>Switch z</button>
+      </div>
+    </div>
     `;
   }
 
